@@ -5,11 +5,14 @@ import Home from "../views/Home.vue";
 Vue.use(VueRouter);
 
 const routes = [
+  //route for landing page
   {
     path: "/",
     name: "Home",
     component: Home
   },
+
+  //route for forecast page with city as param
   {
     path: "/forecast/:city",
     name: "Forecast",

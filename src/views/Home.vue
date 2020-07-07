@@ -28,6 +28,7 @@ export default {
   },
 
   methods: {
+    //push forecast page in router
     goToForecast() {
       if (this.city)
         this.$router.push({ name: "Forecast", params: { city: this.city } });

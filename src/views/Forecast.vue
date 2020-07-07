@@ -27,6 +27,7 @@ export default {
 
   data() {
     return {
+      //config for temperature graph
       temperature: {
         xAxis: {
           type: "category",
@@ -44,6 +45,8 @@ export default {
         ],
         animationDuration: 1000
       },
+     
+      //config for pressure graph
       pressure: {
         xAxis: {
           type: "category",
@@ -61,6 +64,8 @@ export default {
         ],
         animationDuration: 1000
       },
+
+      //config for humidity graph
       humidity: {
         xAxis: {
           type: "category",
@@ -82,6 +87,7 @@ export default {
   },
 
   async beforeCreate() {
+    //get forecast data before component is created
     const APIKey = "9d8ba6f4b0f385d05fb3f3caa77e1902";
     const instance = axios.create({
       baseURL: "http://pro.openweathermap.org/data/2.5"
